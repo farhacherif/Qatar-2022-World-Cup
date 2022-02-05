@@ -1,0 +1,100 @@
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+
+.container {
+  
+    left: 20%;
+    right: 20%;
+    margin-top: 60px;
+}
+
+.row{
+    margin-left:10%;
+    margin-right: 5%;
+    
+}
+.text-center{
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    color:#1A5276;
+}
+th {
+    color: #1589FF;
+}
+.head {
+    background-color: #ffc727; 
+    color: white;
+    font-weight: bold;
+}
+
+
+  
+.title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+
+  
+.editbtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #1589FF;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+
+.modal-title {
+    color: #1A5276;
+}
+.trash {  
+    margin-left: 8%;
+    color: red;
+    font-size: 30px;  
+}
+.edit {
+    margin-left: 27%;
+    color: #1A5276;
+    font-size: 32px;  
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ffc727; 
+    padding: 8px;
+  }
+  
+  #customers tr:hover {background-color: whitesmoke;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1A5276;
+    color: #ffc727;
+  }
+.btn1 {
+    float: right;
+    width: 150px;
+    border-color: #ffc727; 
+    background-color: white ;
+    color: #1A5276;
+  }
+.btn1:hover {
+    background-color: #1A5276;
+    color: #ffc727;
+}
+     
+
+
+

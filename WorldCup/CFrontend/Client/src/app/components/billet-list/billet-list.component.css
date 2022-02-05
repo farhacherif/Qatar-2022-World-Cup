@@ -1,0 +1,32 @@
+.card-body{
+    text-align: right; 
+    color: #1A5276; 
+     margin-top: 110px;
+     margin-right: 15px;
+
+    font-size: small;
+}
+
+.card{
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: 100%;
+}
+
+.idB{
+    text-decoration:none;
+     color:black;
+}
+
+.col-sm-6{
+    align-content: center;
+     padding: 50px 30px 30px 10px;
+}
+.text-center {
+    color: #1A5276; 
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+}
+.container {
+    margin-top: 3%;
+}

@@ -1,0 +1,68 @@
+<div class="col-md-6" *ngIf="showAdminBoard">
+    <hr class="hr">
+    <h2 class="text-center">NOUVEAU JOUEUR</h2>
+    <hr class="hr">
+    <div>
+        <form [formGroup]="addJoueurForm" (ngSubmit)="addJoueur()">
+
+            <div class="form-group col-12">
+                <label for="exampleFormControlInput1" class="form-label">Nom : </label>
+                <input type="text" name="nom" id="nom" formControlName="nom" class="form-control">
+                <div *ngIf="nom?.touched">
+                    <small *ngIf="nom?.errors?.required" class="text-danger">Ce champ est obligatoire</small>
+                </div>
+            </div>
+            <div class="form-group col-12">
+                <label for="exampleFormControlInput1" class="form-label">Prénom : </label>
+                <input type="text" name="prenom" id="prenom" formControlName="prenom" class="form-control">
+                <div *ngIf="prenom?.touched">
+                    <small *ngIf="prenom?.errors?.required" class="text-danger">Ce champ est obligatoire</small>
+                </div>
+            </div>
+ 
+            <div class="form-group col-12  ">
+                <label for="poste">Poste :</label>
+                <br>
+                <select class="form-select " class="select" name="poste" id="poste" formControlName="poste"
+                    class="form-control" (change)="selectChangePoste($event)">
+                    <option [selected]=true>Choisir un poste</option>
+                    <option value="Attaquant">Attaquant</option>
+                    <option value="Défenseur">Défenseur</option>
+                    <option value="Milieu de terrain">Milieu de terrain</option>
+                    <option value="Gardient de but">Gardient de but</option>
+                </select>
+                <div *ngIf="poste?.touched">
+                    <small *ngIf="poste?.errors?.required" class="text-danger">Ce champ est obligatoire</small>
+                </div>
+            </div>
+            <div class="form-group col-12 " >
+                <label for="equipe">Equipe :</label>
+                <br>
+                <select class="form-select "  name="equipe" id="equipe" formControlName="equipe" class="form-control" 
+                (change)="selectChangeEquipe($event)" >
+                        <option >Choisir un equipe</option>
+                        <option value="{{equipe.id}}" *ngFor="let equipe of equipes" >{{equipe.nom}}</option>
+                </select>
+                <div *ngIf="equipe?.touched">
+                        <small *ngIf="equipe?.errors?.required" class="text-danger">Ce champ est obligatoire</small> 
+                </div>
+           </div>
+            <div class="form-group col-12">
+                <label class="form-label" for="customFile">Photo : </label>
+                <input type="file" class="form-control" id="file" (change)="onFileChanged($event)" />
+            </div>
+            
+            <div class="form-group col-12">
+                <button type="submit" class="btn btn1" >ENREGISTRER</button>
+            </div>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
+<!-- [disabled]="addJoueurForm.invalid" -->
+<div *ngIf="!showAdminBoard" >
+    <!-- <app-page404></app-page404> -->
+    
+    <meta http-equiv="refresh" content="0; url=http://localhost:4200/Page404">
+  </div>
